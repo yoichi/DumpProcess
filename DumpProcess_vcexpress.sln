@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+# Visual C++ Express 2008
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DumpLib", "DumpLib\DumpLib.vcproj", "{3A4D3958-B7D4-48E3-BA3E-E5DA81106D38}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DumpProcess", "DumpProcess\DumpProcess.vcproj", "{F779ED8D-F33C-4431-B58A-5656D546A3BD}"
@@ -8,27 +8,17 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
-		Debug|x64 = Debug|x64
 		Release|Win32 = Release|Win32
-		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{3A4D3958-B7D4-48E3-BA3E-E5DA81106D38}.Debug|Win32.ActiveCfg = Debug|Win32
 		{3A4D3958-B7D4-48E3-BA3E-E5DA81106D38}.Debug|Win32.Build.0 = Debug|Win32
-		{3A4D3958-B7D4-48E3-BA3E-E5DA81106D38}.Debug|x64.ActiveCfg = Debug|x64
-		{3A4D3958-B7D4-48E3-BA3E-E5DA81106D38}.Debug|x64.Build.0 = Debug|x64
 		{3A4D3958-B7D4-48E3-BA3E-E5DA81106D38}.Release|Win32.ActiveCfg = Release|Win32
 		{3A4D3958-B7D4-48E3-BA3E-E5DA81106D38}.Release|Win32.Build.0 = Release|Win32
-		{3A4D3958-B7D4-48E3-BA3E-E5DA81106D38}.Release|x64.ActiveCfg = Release|x64
-		{3A4D3958-B7D4-48E3-BA3E-E5DA81106D38}.Release|x64.Build.0 = Release|x64
 		{F779ED8D-F33C-4431-B58A-5656D546A3BD}.Debug|Win32.ActiveCfg = Debug|Win32
 		{F779ED8D-F33C-4431-B58A-5656D546A3BD}.Debug|Win32.Build.0 = Debug|Win32
-		{F779ED8D-F33C-4431-B58A-5656D546A3BD}.Debug|x64.ActiveCfg = Debug|x64
-		{F779ED8D-F33C-4431-B58A-5656D546A3BD}.Debug|x64.Build.0 = Debug|x64
 		{F779ED8D-F33C-4431-B58A-5656D546A3BD}.Release|Win32.ActiveCfg = Release|Win32
 		{F779ED8D-F33C-4431-B58A-5656D546A3BD}.Release|Win32.Build.0 = Release|Win32
-		{F779ED8D-F33C-4431-B58A-5656D546A3BD}.Release|x64.ActiveCfg = Release|x64
-		{F779ED8D-F33C-4431-B58A-5656D546A3BD}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
