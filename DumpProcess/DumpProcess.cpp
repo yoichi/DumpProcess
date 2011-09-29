@@ -11,9 +11,18 @@ static void PrintUsage()
 	Console::WriteLine("\tDumpProcess /n name [outdir]");
 }
 
-static String ^GenerateDumpFileName(Process ^proc)
+static String ^GenerateDumpFileName(Process ^proc, String ^dir)
 {
-	return proc->ProcessName + "." + proc->Id + ".dmp";
+	String ^filename;
+	for (UInt32 i = 0; i < UInt32::MaxValue; i++)
+	{
+		filename = IO::Path::Combine(dir, proc->ProcessName + "." + proc->Id + "." + i + ".dmp");
+		if (!IO::File::Exists(filename))
+		{
+			break;
+		}
+	}
+	return filename;
 }
 
 static int Dump(int pid, String ^filename)
@@ -70,7 +79,8 @@ int main(array<String ^> ^args)
 		}
 		else
 		{
-			filename = GenerateDumpFileName(proc);
+			String ^dir = IO::Directory::GetCurrentDirectory();
+			filename = GenerateDumpFileName(proc, dir);
 		}
 		return Dump(pid, filename);
 	}
@@ -100,7 +110,7 @@ int main(array<String ^> ^args)
 		int result = 0;
 		for each (Process ^proc in procs)
 		{
-			String ^filename = IO::Path::Combine(dir, GenerateDumpFileName(proc));
+			String ^filename = GenerateDumpFileName(proc, dir);
 			result |= Dump(proc->Id, filename);
 		}
 		return result;
